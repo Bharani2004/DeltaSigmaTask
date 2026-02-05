@@ -1,4 +1,4 @@
-const BASE_URL = "https://deltasigmatask.com.onrender.com/api/items";
+const BASE_URL = "https://deltasigmatask.com.onrender.com/bharani/items";
 
 function addItem() {
     const item = {
