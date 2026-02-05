@@ -13,12 +13,12 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")  // allow all endpoints
-                            .allowedOrigins("https://stirring-smakager-848b7e.netlify.app") // replace with your actual Netlify URL
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // include OPTIONS for preflight
-                        .allowedHeaders("*") // allow all headers
-                        .allowCredentials(true) // allow cookies if needed
-                        .maxAge(3600); // cache preflight response for 1 hour
+                registry.addMapping("/**")  
+                            .allowedOrigins("https://stirring-smakager-848b7e.netlify.app") 
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
+                        .allowedHeaders("*") 
+                        .allowCredentials(true)
+                        .maxAge(3600);
             }
         };
     }

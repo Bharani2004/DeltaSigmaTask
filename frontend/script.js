@@ -17,7 +17,7 @@ function addItem() {
     .then(res => res.json())
     .then(data => {
         document.getElementById("addStatus").textContent = `Item added successfully with id: ${data.id}`;
-        document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        document.getElementById("result").textContent = ""; 
         // Add item to right column
         addItemToList(data);
     })
@@ -44,7 +44,6 @@ function getItem() {
             return res.json();
         })
         .then(data => {
-            // Show item in result area
             document.getElementById("result").textContent = JSON.stringify(data, null, 2);
         })
         .catch(err => {
