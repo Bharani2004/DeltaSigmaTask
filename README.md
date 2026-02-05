@@ -23,7 +23,7 @@ POST: https://deltasigmatask.onrender.com/bharani/items
 And in Browser, now check with below endpoint
 GET: https://deltasigmatask.onrender.com/bharani/items/1
 
-Item Management REST API 
+**Item Management REST API **
 
 A simple Java backend application built using Spring Boot that provides RESTful APIs to manage a collection of items (similar to a basic e-commerce or catalog service).
 
