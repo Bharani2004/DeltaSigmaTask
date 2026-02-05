@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")  // allow all endpoints
-                        .allowedOrigins("*") // can replace "*" with your Netlify URL for security
+                            .allowedOrigins("https://stirring-smakager-848b7e.netlify.app") // replace with your actual Netlify URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // include OPTIONS for preflight
                         .allowedHeaders("*") // allow all headers
                         .allowCredentials(true) // allow cookies if needed
