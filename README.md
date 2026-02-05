@@ -29,8 +29,8 @@ Each item contains:
 1) Add a New Item
 **Request**
 POST: http://localhost:8080/bharani/items
-Body-> raw-> JSON
 
+Body-> raw-> JSON
 {
   "name": "Nokia15",
   "description": "Nokia",
@@ -64,8 +64,8 @@ Invalid inputs return HTTP 400 Bad Request with validation error messages.
 
 **How To Run**
 Clone the Repo:
-git clone repo-url
-cd deltasigmatest
+
+git clone https://github.com/Bharani2004/DeltaSigmaTask.git
 cd DeltaSigmaTask
 
 Run in terminal: mvn spring-boot:run
