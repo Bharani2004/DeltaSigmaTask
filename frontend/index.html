@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Item Management System</h2>
+
+<div class="form">
+    <input type="text" id="name" placeholder="Item Name">
+    <input type="text" id="description" placeholder="Description">
+    <input type="number" id="price" placeholder="Price">
+    <button onclick="addItem()">Add Item</button>
+</div>
+
+<div class="form">
+    <input type="number" id="itemId" placeholder="Item ID">
+    <button onclick="getItem()">Get Item</button>
+</div>
+
+<pre id="result"></pre>
+
+<script src="script.js"></script>
+</body>
+</html>
