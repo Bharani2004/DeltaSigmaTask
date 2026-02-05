@@ -1,6 +1,29 @@
 # DeltaSigmaTask
 
-Item Management REST API 
+Render Link: https://deltasigmatask.onrender.com
+
+Now Each and everytime render restarts our application,
+
+So first open the Postman and give the Add a New Item endpoint which is below:
+
+POST: https://deltasigmatask.onrender.com/bharani/items
+{
+  "name": "Nokia15",
+  "description": "Nokia",
+  "price": 7299
+}
+**Response**
+{
+    "id": 1,
+    "name": "Nokia15",
+    "description": "Nokia",
+    "price": 7299.0
+}
+
+And in Browser, now check with below endpoint
+GET: https://deltasigmatask.onrender.com/bharani/items/1
+
+**Item Management REST API**
 
 A simple Java backend application built using Spring Boot that provides RESTful APIs to manage a collection of items (similar to a basic e-commerce or catalog service).
 
@@ -36,7 +59,6 @@ Body-> raw-> JSON
   "description": "Nokia",
   "price": 7299
 }
-
 **Response**
 {
     "id": 1,
