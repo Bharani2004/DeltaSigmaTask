@@ -4,23 +4,21 @@ Item Management REST API
 
 A simple Java backend application built using Spring Boot that provides RESTful APIs to manage a collection of items (similar to a basic e-commerce or catalog service).
 
-
-Features
+**Features**
 1) Add new items
 2) Fetch an item by ID
 3) In-memory data storage using ArrayList
 4) Input validation using Jakarta Validation
 5) RESTful API design
 
-Tech Stack
+**Tech Stack**
 1) Java 21
 2) Spring Boot
 3) Spring Web
 4) Jakarta Validation
 5) Maven
 
-Item Model
-
+**Item Model**
 Each item contains:
 1) id (Long)
 2) name (String, required)
@@ -32,6 +30,7 @@ Each item contains:
 **Request**
 POST: http://localhost:8080/bharani/items
 Body-> raw-> JSON
+
 {
   "name": "Nokia15",
   "description": "Nokia",
@@ -62,3 +61,13 @@ Response:
 2) description → must not be blank
 3) price → must not be null
 Invalid inputs return HTTP 400 Bad Request with validation error messages.
+
+**How To Run**
+Clone the Repo:
+git clone repo-url
+cd deltasigmatest
+cd DeltaSigmaTask
+
+Run in terminal: mvn spring-boot:run
+
+Access the API Endpoints in Postman or browser
