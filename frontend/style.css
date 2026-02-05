@@ -4,6 +4,25 @@ body {
     background-color: #f4f4f4;
 }
 
+#addedItems {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    min-width: 200px;
+    max-width: 250px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+#itemsList > div {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    font-size: 14px;
+}
+}
+
 h2 {
     color: #333;
 }

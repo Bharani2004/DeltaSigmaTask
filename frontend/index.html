@@ -14,6 +14,7 @@
     <input type="text" id="description" placeholder="Description">
     <input type="number" id="price" placeholder="Price">
     <button onclick="addItem()">Add Item</button>
+    <span id="addStatus" style="margin-left:10px;color:#007bff;"></span>
 </div>
 
 <div class="form">
@@ -21,7 +22,13 @@
     <button onclick="getItem()">Get Item</button>
 </div>
 
-<pre id="result"></pre>
+<div style="display:flex;">
+    <pre id="result" style="flex:1;"></pre>
+    <div id="addedItems" style="min-width:200px;max-width:250px;background:#fff;padding:15px;margin-left:20px;border-radius:8px;box-shadow:0 2px 8px #ccc;">
+        <strong>Added Items</strong>
+        <div id="itemsList"></div>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>

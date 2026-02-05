@@ -7,6 +7,8 @@ function addItem() {
         price: document.getElementById("price").value
     };
 
+    // Show status while processing
+    document.getElementById("addStatus").textContent = "Item is getting added...";
     fetch(BASE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -14,9 +16,23 @@ function addItem() {
     })
     .then(res => res.json())
     .then(data => {
-        document.getElementById("result").textContent =
-            JSON.stringify(data, null, 2);
+        document.getElementById("addStatus").textContent = `Item added successfully with id: ${data.id}`;
+        document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+        // Add item to right column
+        addItemToList(data);
+    })
+    .catch(() => {
+        document.getElementById("addStatus").textContent = "Failed to add item.";
     });
+}
+
+function addItemToList(item) {
+    const itemsList = document.getElementById("itemsList");
+    const div = document.createElement("div");
+    div.style.borderBottom = "1px solid #eee";
+    div.style.padding = "8px 0";
+    div.textContent = `ID: ${item.id}, Name: ${item.name}, Price: ${item.price}`;
+    itemsList.appendChild(div);
 }
 
 function getItem() {
@@ -28,8 +44,8 @@ function getItem() {
             return res.json();
         })
         .then(data => {
-            document.getElementById("result").textContent =
-                JSON.stringify(data, null, 2);
+            // Show item in result area
+            document.getElementById("result").textContent = JSON.stringify(data, null, 2);
         })
         .catch(err => {
             document.getElementById("result").textContent = err.message;
